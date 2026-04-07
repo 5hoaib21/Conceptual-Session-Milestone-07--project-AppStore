@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImg from '../../assets/Image/hero.png';
+import bannerImg from "../../assets/Image/hero.png";
 
 const Banner = () => {
   return (
@@ -14,13 +14,11 @@ const Banner = () => {
         digital experiences that truly make an impact.
       </p>
       <div className="flex justify-center gap-3">
-
-      <button className="btn">paly Store</button>
-      <button className="btn">App Store</button>
+        <button className="btn">paly Store</button>
+        <button className="btn">App Store</button>
       </div>
       <img src={bannerImg} className="mx-auto" alt="" />
     </div>
-    
   );
 };
 

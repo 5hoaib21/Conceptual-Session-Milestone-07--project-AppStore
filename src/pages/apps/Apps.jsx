@@ -1,14 +1,9 @@
-
 import AppCart from "../../components/ui/AppCart";
 import { DotLoader } from "react-spinners";
 import useApps from "../../hooks/useApps";
 
 const Apps = () => {
-
-  
   const { apps, loading } = useApps();
-
-
 
   return (
     <div className="container mx-auto my-20 ">

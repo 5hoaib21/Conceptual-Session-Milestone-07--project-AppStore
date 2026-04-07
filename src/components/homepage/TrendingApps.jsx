@@ -1,5 +1,3 @@
-
-
 import AppCart from "../ui/AppCart";
 import { DotLoader } from "react-spinners";
 import { Link } from "react-router";
@@ -13,9 +11,7 @@ const TrendingApps = () => {
 
   //   const data = useLoaderData()
   // console.log(data, 'data from home page');
- const { apps, loading } = useApps();
-
-  
+  const { apps, loading } = useApps();
 
   return (
     <div className="container mx-auto my-20">
@@ -40,12 +36,11 @@ const TrendingApps = () => {
           ))}
         </div>
       )}
-<div className="text-center mt-4">
-
-      <Link to={'/apps'}>
-        <button className="btn bg-purple-500 text-white">View All</button>
-      </Link>
-</div>
+      <div className="text-center mt-4">
+        <Link to={"/apps"}>
+          <button className="btn bg-purple-500 text-white">View All</button>
+        </Link>
+      </div>
     </div>
   );
 };

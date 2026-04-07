@@ -5,9 +5,8 @@ import useApps from "../../hooks/useApps";
 
 const Dashboard = () => {
   const { installedApps } = useContext(InstalledAppsContext);
-  const {apps, loading} = useApps()
+  const { apps } = useApps();
   const unInstalledAppsLength = apps.length - installedApps.length;
-  
 
   const data = [
     { name: "Installed", value: installedApps.length, fill: "#0088fe" },

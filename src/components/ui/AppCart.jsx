@@ -3,9 +3,11 @@ import { FaDownload, FaStar } from "react-icons/fa";
 import { Link } from "react-router";
 
 const AppCart = ({ app }) => {
-  
   return (
-    <Link to={`/apps/${app.id}`} className="card bg-base-100 gap-3 shadow-sm hover:shadow-xl transition-shadow duration-300">
+    <Link
+      to={`/apps/${app.id}`}
+      className="card bg-base-100 gap-3 shadow-sm hover:shadow-xl transition-shadow duration-300"
+    >
       <figure>
         <img src={app.image} className="h-50 w-auto" alt={app.title} />
       </figure>
