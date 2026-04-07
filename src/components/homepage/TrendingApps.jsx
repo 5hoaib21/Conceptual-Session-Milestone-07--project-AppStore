@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+
 
 import AppCart from "../ui/AppCart";
 import { DotLoader } from "react-spinners";
+import { Link } from "react-router";
+import useApps from "../../hooks/useApps";
 
 // const appsPromise = fetch('/data.json').then(res => res.json());
 
@@ -11,25 +13,9 @@ const TrendingApps = () => {
 
   //   const data = useLoaderData()
   // console.log(data, 'data from home page');
-  const [apps, setApps] = useState([]);
-  const [loading, setLoading] = useState(true);
+ const { apps, loading } = useApps();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data.json");
-      const data = await res.json();
-      console.log(data);
-
-      setTimeout(() => {
-        setApps(data);
-        setLoading(false);
-      }, 3000);
-    };
-    fetchData();
-  }, []);
-
-  console.log(apps, "apps");
-  console.log(loading, "loading");
+  
 
   return (
     <div className="container mx-auto my-20">
@@ -49,11 +35,17 @@ const TrendingApps = () => {
         </div>
       ) : (
         <div className="grid grid-cols-3 gap-5">
-          {apps.map((app, i) => (
+          {apps.slice(0, 9).map((app, i) => (
             <AppCart key={i} app={app} />
           ))}
         </div>
       )}
+<div className="text-center mt-4">
+
+      <Link to={'/apps'}>
+        <button className="btn bg-purple-500 text-white">View All</button>
+      </Link>
+</div>
     </div>
   );
 };

@@ -1,11 +1,13 @@
 import React from "react";
 import { FaDownload, FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const AppCart = ({ app }) => {
+  
   return (
-    <div className="card bg-base-100 gap-3 shadow-sm">
+    <Link to={`/apps/${app.id}`} className="card bg-base-100 gap-3 shadow-sm hover:shadow-xl transition-shadow duration-300">
       <figure>
-        <img src={app.image} alt={app.title} />
+        <img src={app.image} className="h-50 w-auto" alt={app.title} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{app.title}</h2>
@@ -18,7 +20,7 @@ const AppCart = ({ app }) => {
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
