@@ -7,6 +7,7 @@ import RootLayOut from "./LayOut/RootLayOut";
 import Apps from "./pages/apps/Apps";
 import InstallApps from "./pages/installApps/InstallApps";
 import Error from "./pages/error/Error";
+import Homepage from "./pages/homepage/Homepage";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <h2>Home Page</h2>,
+        element: <Homepage />,
+        loader: ()  => fetch('/data.json')
       },
       {
         path: "/apps",

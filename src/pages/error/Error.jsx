@@ -2,7 +2,7 @@ import React from 'react';
 
 const Error = () => {
   return (
-   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4">
+   <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4">
       <div className="max-w-md w-full text-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-8">
         {/* Icon */}
         <div className="flex justify-center mb-5">
