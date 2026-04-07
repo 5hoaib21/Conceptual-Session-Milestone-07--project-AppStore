@@ -18,6 +18,10 @@ const Navbar = () => {
       path: "/installedApps",
       text: "Installation",
     },
+    {
+      path: "/dashboard",
+      text: "Dashboard",
+    },
   ];
   return (
     <nav className="shadow-md">
@@ -25,7 +29,9 @@ const Navbar = () => {
         <img src={navLogo} alt="" className="w-12.5" />
         <ul className="flex justify-between items-center gap-3">
           {navItems.map((item, i) => (
-            <MyNavLink key={i} to={item.path}>{item.text}</MyNavLink>
+            <MyNavLink key={i} to={item.path}>
+              {item.text}
+            </MyNavLink>
           ))}
           {/* <li>
             <MyNavLink to={"/"}>Home</MyNavLink>

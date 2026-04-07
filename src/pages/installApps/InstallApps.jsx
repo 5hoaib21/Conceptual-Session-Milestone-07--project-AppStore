@@ -15,7 +15,7 @@ const InstallApps = () => {
 
   return (
     <div className="container mx-auto my-10">
-      {installedApps.map((app) => (
+      {installedApps.length === 0? <h2 className="font-bold text-4xl text-center my-5">No apps installed</h2> : installedApps.map((app) => (
         <div
           key={app.id}
           className="bg-base-200 flex justify-between gap-4 items-center shadow m-4 p-4 rounded-2xl cursor-pointer  hover:shadow-lg transition-shadow duration-300"
